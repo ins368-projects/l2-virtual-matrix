@@ -13,7 +13,12 @@ A continuación, las instrucciones del laboratorio:
 Esta es la definición de las 3 funciones mencionadas anteriormente en pseudocódigo:
 
 ```
+// Allows you to create a matrix.
 int[] createMatrix(rows: int, columns: int);
+
+// Allows you to write an element in the matrix.
 void writeInMatrix(arr: int[], rows: int, columns: int, x: int, y: int, value: int);
+
+// Allows you to read an element of the matrix given the position of it
 int readMatrixPosition(arr: int[], rows: int, columns: int, x: int, y: int);
 ```
