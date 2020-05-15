@@ -1,4 +1,4 @@
-# L2 - Virtual 2 dimensional array
+# L2 - Virtual Matrix
 
 Elaborar una serie de métodos para manejar información en un array unidimensional como si fuera bidimensional.
 
