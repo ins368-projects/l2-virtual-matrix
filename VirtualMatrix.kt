@@ -1,16 +1,8 @@
-fun computeUnidimensionalPosition(x: Int, y: Int, rows: Int, columns: Int): Int {
-  var position: Int = 0;
+fun computeUnidimensionalPosition(row: Int, column: Int, rows: Int, columns: Int): Int {
+  val rowsTravel = if(row < rows) row * columns else 0
+  val index = if(column < columns) rowsTravel + column else 0
 
-  for(i in 0 until rows - 1)
-    for(j in 0 until columns - 1) {
-      val foundPosition: Boolean = x == i && y == j;
-      if(foundPosition)
-        return position;
-
-      position++;
-    }
-
-  return 0;
+  return index
 }
 
 fun createMatrix(rows: Int, columns: Int): Array<Int> {
@@ -19,14 +11,16 @@ fun createMatrix(rows: Int, columns: Int): Array<Int> {
   return matrix;
 }
 
-fun writeInMatrix(matrix: Array<Int>, rows: Int, columns: Int, x: Int, y: Int, value: Int) {
-  val position: Int = computeUnidimensionalPosition(x, y, rows, columns);
+fun writeInMatrix(matrix: Array<Int>, rows: Int, columns: Int, row: Int, column: Int, value: Int) {
+  val position: Int = computeUnidimensionalPosition(row, column, rows, columns);
+  println("(write) [position]: $position")
   if(position < matrix.size - 1)
     matrix[position] = value;
 }
 
-fun getMatrixValue(matrix: Array<Int>, rows: Int, columns: Int, x: Int, y: Int): Int {
-  val position: Int = computeUnidimensionalPosition(x, y, rows, columns);
+fun getMatrixValue(matrix: Array<Int>, rows: Int, columns: Int, row: Int, column: Int): Int {
+  val position: Int = computeUnidimensionalPosition(row, column, rows, columns);
+  println("(get) [position]: $position")
   return matrix[position];
 }
 
@@ -37,9 +31,9 @@ const val COLUMNS: Int = 4;
 fun main() {
   val matrix: Array<Int> = createMatrix(ROWS, COLUMNS);
 
-  writeInMatrix(matrix, ROWS, COLUMNS, 2, 1, 5);
+  writeInMatrix(matrix, ROWS, COLUMNS, 3, 3, 5);
 
-  val value: Int = getMatrixValue(matrix, ROWS, COLUMNS, 2, 1);
+  val value: Int = getMatrixValue(matrix, ROWS, COLUMNS, 3, 3);
 
   println(value);
 }
