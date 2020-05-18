@@ -30,6 +30,7 @@ fun getMatrixValue(matrix: Array<Int>, rows: Int, columns: Int, x: Int, y: Int):
   return matrix[position];
 }
 
+// Set following values to change the size of the "matrix"
 const val ROWS: Int = 4;
 const val COLUMNS: Int = 4;
 
