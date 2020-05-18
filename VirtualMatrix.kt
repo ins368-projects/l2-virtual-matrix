@@ -13,14 +13,12 @@ fun createMatrix(rows: Int, columns: Int): Array<Int> {
 
 fun writeInMatrix(matrix: Array<Int>, rows: Int, columns: Int, row: Int, column: Int, value: Int) {
   val position: Int = computeUnidimensionalPosition(row, column, rows, columns);
-  println("(write) [position]: $position")
   if(position < matrix.size - 1)
     matrix[position] = value;
 }
 
 fun getMatrixValue(matrix: Array<Int>, rows: Int, columns: Int, row: Int, column: Int): Int {
   val position: Int = computeUnidimensionalPosition(row, column, rows, columns);
-  println("(get) [position]: $position")
   return matrix[position];
 }
 
