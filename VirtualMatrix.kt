@@ -13,7 +13,7 @@ fun createMatrix(rows: Int, columns: Int): Array<Int> {
 
 fun writeInMatrix(matrix: Array<Int>, rows: Int, columns: Int, row: Int, column: Int, value: Int) {
   val position: Int = computeUnidimensionalPosition(row, column, rows, columns);
-  if(position < matrix.size - 1)
+  if(position <= matrix.size - 1)
     matrix[position] = value;
 }
 
