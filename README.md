@@ -4,8 +4,8 @@ Elaborar una serie de métodos para manejar información en un array unidimensio
 
 ## Integrantes del grupo #4
 
-- Mikhael Santos Fernández - 1088621
 - Gabriel Santana - 1085855
+- Mikhael Santos Fernández - 1088621
 
 ## Enunciado
 
