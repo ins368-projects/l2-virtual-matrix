@@ -2,7 +2,7 @@
 
 Elaborar una serie de métodos para manejar información en un array unidimensional como si fuera bidimensional.
 
-## Integrantes del equipo
+## Integrantes del grupo #4
 
 - Mikhael Santos Fernández - 1088621
 - Gabriel Santana - 1085855
